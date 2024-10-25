@@ -38,11 +38,12 @@ android {
             applicationId = id
         }
     }
-
     packagingOptions {
-        exclude 'META-INF/NOTICE.md'
-        exclude 'META-INF/LICENSE.md'
+        resources {
+            excludes += ['META-INF/NOTICE.md', 'META-INF/LICENSE.md']
+        }
     }
+
 
     compileOptions {
         targetCompatibility 1.8
@@ -68,6 +69,7 @@ android {
     viewBinding {
         enabled true
     }
+    namespace 'com.pengxh.autodingding'
 
     applicationVariants.configureEach { variant ->
         variant.outputs.configureEach {
