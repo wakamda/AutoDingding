@@ -18,10 +18,12 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-        //依赖库
-        maven { url 'https://jitpack.io' }
         google()
+//        mavenCentral() // 可选，根据需要添加
+
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://repo.eclipse.org/content/repositories/paho-snapshots/' }
+        maven { url 'https://jitpack.io' }
     }
 }
 
